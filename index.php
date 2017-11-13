@@ -10,17 +10,20 @@ $controller = '';
 
 switch ($action){
 	case 'login':
-		require_once(VIEW . 'login.html');
+		require_once(CONTROLLER . 'LoginController.php');
+		$controller = new LoginController();
 		break;
 	case 'inscription':
-		require_once(VIEW . 'inscription.html');
+		require_once(CONTROLLER . 'InscriptionController.php');
+		$controller = new InscriptionController();
 		break;
   case 'chatbox':
-    require_once(CONTROLLER , 'chatbox.html');
+    require_once(CONTROLLER . 'ChatboxController.php');
+		$controller = new ChatboxController();
     break;
   default:
-  		require_once(CONTROLLER . 'login.html');
-  		$controller = ;
+  		require_once(CONTROLLER . 'LoginController.php');
+			$controller = new LoginController();
   		break;
 }
 
