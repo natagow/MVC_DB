@@ -18,6 +18,10 @@ switch ($action){
   case 'router':
     require_once(CONTROLLER , 'router.php');
     break;
+  default:
+  		require_once(CONTROLLER . '');
+  		$controller = ;
+  		break;
 }
 
 $controller->run();
