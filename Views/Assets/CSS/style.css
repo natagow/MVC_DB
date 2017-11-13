@@ -270,9 +270,41 @@ background-image: url(http://rulistaff.free.fr/background.jpg);
 
 header .principal {
 color: #fff;
-text-align: center;
+
 font-size: 0.8rem;
 margin-top : 12px;
 clear: both;
 font-family: "arial","Open Sans","Avenir Next",sans-serif;
 line-height: 1.5;
+}
+.navUp{
+  display: block;
+  margin: auto;
+}
+.bouton {
+  display: block;
+  margin: auto;
+  width: 28%
+}
+.bouton ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.bouton ul a {
+margin-right: 15px;
+line-height:50px;
+display : block;
+padding : 0 0.5em;
+list-style-type : none;
+float: left;
+background:url(http://rulistaff.free.fr/background.jpg) no-repeat;
+color:white;
+text-decoration:none;
+}
+.bouton a:hover {
+background:url(http://rulistaff.free.fr/background.jpg) no-repeat;
+}
+.bouton ul li {
+list-style: none;
+}
