@@ -10,10 +10,10 @@ $controller = '';
 
 switch ($action){
 	case 'page1':
-		require_once(VIEW . 'page1.php');
+		require_once(VIEW . 'inscription.html');
 		break;
 	case 'page2':
-		require_once(VIEW . 'page2.php');
+		require_once(VIEW . 'login.html');
 		break;
   case 'router':
     require_once(CONTROLLER , 'router.php');
