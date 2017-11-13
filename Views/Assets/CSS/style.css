@@ -1,32 +1,20 @@
-/*---- Général ----*/
-
-/*---- Body ----*/
-
 body{
   text-align: center;
 }
-
-/*---- Header ----*/
-
-.principal{
-  width: 100%;
-  height: 150px;
-  margin: auto;
-  padding: 0;
-  border: 1px solid blue;
-}
-
-/*navUp / navRight / navBas / navLeftDown / navCenterDown / centre */
-
-
-/*---- Inscription / Login ----*/
-
 .main{
   width: 640px;
   height: 100vh;
   margin: auto;
   padding: 0;
   border: 1px solid black;
+}
+
+.header{
+  width: 100%;
+  height: 150px;
+  margin: auto;
+  padding: 0;
+  border: 1px solid blue;
 }
 
 .form-style-6{
