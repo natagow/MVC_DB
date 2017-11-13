@@ -9,17 +9,17 @@ $action= isset($_GET['action']) ? htmlentities($_GET['action']) : 'default';
 $controller = '';
 
 switch ($action){
-	case 'page1':
-		require_once(VIEW . 'inscription.html');
-		break;
-	case 'page2':
+	case 'login':
 		require_once(VIEW . 'login.html');
 		break;
-  case 'router':
-    require_once(CONTROLLER , 'router.php');
+	case 'inscription':
+		require_once(VIEW . 'inscription.html');
+		break;
+  case 'chatbox':
+    require_once(CONTROLLER , 'chatbox.html');
     break;
   default:
-  		require_once(CONTROLLER . '');
+  		require_once(CONTROLLER . 'login.html');
   		$controller = ;
   		break;
 }
