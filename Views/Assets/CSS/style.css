@@ -3,11 +3,13 @@
 /*---- Body ----*/
 
 /*---- Inscription / Login ----*/
-body{
+
+body {
   text-align: center;
   background-image: url(https://hdwallsource.com/img/2014/4/free-background-wallpaper-22918-23554-hd-wallpapers.jpg);
   background-repeat: no-repeat;
 }
+
 
 .main{
   width: 640px;
@@ -21,13 +23,6 @@ body{
 
 }
 
-.header{
-  width: 100%;
-  height: 150px;
-  margin: auto;
-  padding: 0;
-  border: 1px solid blue;
-}
 
 .form-style-6{
     font: 95% Arial, Helvetica, sans-serif;
@@ -260,3 +255,27 @@ body{
 .form-control send-message{
  width: 100%;
 }
+
+/*---- header ----*/
+
+header {
+display: inline-block;
+width: 100%;
+height: 150px;
+background-color: #43D1AF;
+padding-top: 6vh;
+padding-bottom: 5vh;
+margin-top: 6vh;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+header .principal {
+color: #fff;
+text-align: center;
+font-size: 0.8rem;
+margin-top : 12px;
+clear: both;
+font-family: "arial","Open Sans","Avenir Next",sans-serif;
+line-height: 1.5;
