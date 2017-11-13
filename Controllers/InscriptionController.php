@@ -1,5 +1,5 @@
 <?php
-class InscriptionController {
+class InscriptionController{
 
 	public function __construct(){
 	}
