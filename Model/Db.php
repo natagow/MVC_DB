@@ -17,8 +17,15 @@ class Db
 
     public function signUp($pseudo, $password, $sexe)
     {
+        $req = $this->db->prepare("SELECT * FROM Users where pseudo = (?)");
+        $req->execute([$pseudo]);
+        if ($req->rowCount() == 1) {
+            return false;
+        }
+
         $req = $this->db->prepare("INSERT INTO Users (pseudo,password,sexe)VALUES  (?,?,?)");
         $req->execute([$pseudo, $password, $sexe]);
+        return true;
 
     }
 
@@ -33,8 +40,12 @@ class Db
                 session_start();
                 $_SESSION["user"] = $user;
                 $_SESSION["logged"] = true;
-                echo "you are logged in";
+                return true;
+            } else {
+                echo "nooooooooooooooo";
             }
+        } else {
+            return false;
         }
     }
 
@@ -47,10 +58,11 @@ class Db
         header("location:../index.php");
     }
 
-    public function newMessage($text, $user_id)
+    public function newMessage($text)
     {
+        session_start();
         $req = $this->db->prepare("INSERT INTO Messages (text,id_user)VALUES  (?,?)");
-        $req->execute([$text, $user_id]);
+        $req->execute([$text, $_SESSION[id]]);
     }
 
     public function getMessages()

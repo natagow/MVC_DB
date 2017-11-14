@@ -16,7 +16,7 @@ class Validation
 
         session_start();
         $_SESSION["errors"] = $this->errors;
-        return;
+        return count($this->errors);
     }
 
     /**
@@ -36,9 +36,3 @@ class Validation
         return;
     }
 }
-
-$validation = new Validation();
-$validation->ids("g", "");
-print_r($validation->displayErrors());
-$validation->clearErrors();
-print_r($validation->displayErrors());
