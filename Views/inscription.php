@@ -1,3 +1,5 @@
+<?php include "header.php" ?>
+
 <div class="main">
     <div class="form-style-6">
         <h1>Inscription</h1>

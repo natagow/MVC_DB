@@ -12,17 +12,13 @@ class UserController
         $this->validation = new Validation();
     }
 
-    public function index()
-    {
-        header("location:Views/login.php");
-    }
-
-    public function login($pseudo, $password)
+    public function login($pseudo = null, $password = null)
     {
         if ($this->db->login($pseudo, $password)) {
             header("location:Views/Chatbox.php");
+            exit();
         }
-        include "Views/login.php";
+        header("location:Views/login.php");
     }
 
     public function signup($pseudo, $password, $sexe)
@@ -40,7 +36,8 @@ class UserController
 
     public function logout()
     {
-
+        $this->db->logout();
+        header("location:Views/login.php");
     }
 
 }

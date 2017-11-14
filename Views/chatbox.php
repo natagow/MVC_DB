@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Views/Assets/CSS/style.css">
-    <title>Chatbox</title>
-</head>
-
-<body>
-<div class="container">
+<?php include "./header.php" ?>
+<div class="chatbox">
 
     <?php
     include "../Model/Db.php";
@@ -18,24 +9,24 @@
 
     <?php
     foreach ($messages as $message) {
-        echo "<li>{$message->pseudo} : {$message->text}</li>";
+        $time = substr($message->time, 11);
+        echo "<p class='messages'>[$time] {$message->pseudo} : {$message->text}</p>";
     }
     ?>
-    <form action="../index.php" method="post">
+    <form action="../index.php" method="post" class="chatForm">
         <input type="hidden" name="action" value="ChatboxController@createMessage"/>
-        <div class="send-wrap ">
-            <textarea name="message" class="form-control send-message" rows="3"
-                      placeholder="Write a reply..."></textarea>
-        </div>
-
-        <div class="btn-panel">
-            <a href="" class=" col-lg-3 btn   send-message-btn " role="button"><i class="fa fa-cloud-upload"></i> Add
-                Files</a>
-            <input type="submit" value="Send Message">
-        </div>
+        <input class="textarea" name="message" type="text" placeholder="Type here!"/>
+        <div class="emojis"></div>
     </form>
 </div>
-</div>
-</div>
+<script>
+    document.onkeydown = function (e) {
+        var keyCode = e.keyCode;
+        if (keyCode == 13) {
+            $form = document.querySelector(".chatForm");
+            $form.submit();
+        }
+    }
+</script>
 </body>
 </html>

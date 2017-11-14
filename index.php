@@ -7,16 +7,9 @@ require "Model/Db.php";
 define('CONTROLLER', 'Controllers/');
 
 
-//if ($_SERVER['REQUEST_METHOD'] == "GET") {
-//    $controllerAndMethode = explode("@", $action);
-//    $controller = new $controllerAndMethode[0]();
-//    $methode = $controllerAndMethode[1];
-//} else {
-//    $action = "UserController@index";
-//}
-
-if ($_SERVER['REQUEST_METHOD'] == "POST") {
+if ($_SERVER['REQUEST_METHOD'] == "POST" || $_SERVER['REQUEST_METHOD'] == "GET") {
     extract($_POST);
+    extract($_GET);
     $controllerAndMethode = explode("@", $action);
     $controller = new $controllerAndMethode[0]();
     $methode = $controllerAndMethode[1];
@@ -28,7 +21,11 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 switch ($action) {
     case 'UserController@login':
         require_once(CONTROLLER . 'UserController.php');
-        call_user_func_array([$controller, $methode], [$pseudo, $password]);
+        if (isset($pseudo) && isset($pseudo)) {
+            call_user_func_array([$controller, $methode], [$pseudo, $password]);
+        } else {
+            call_user_func_array([$controller, $methode], []);
+        }
         break;
     case 'UserController@signup':
         require_once(CONTROLLER . 'UserController.php');
@@ -37,6 +34,9 @@ switch ($action) {
     case 'ChatboxController@createMessage':
         require_once(CONTROLLER . 'ChatboxController.php');
         call_user_func_array([$controller, $methode], [$message]);
+        break;
+    case 'UserController@logout':
+        call_user_func_array([$controller, $methode], []);
         break;
     case 'UserController@index':
         header("location:Views/login.php");
