@@ -5,38 +5,33 @@
 /*---- Inscription / Login ----*/
 
 body {
-  text-align: center;
-  background-image: url(https://hdwallsource.com/img/2014/4/free-background-wallpaper-22918-23554-hd-wallpapers.jpg);
-  background-repeat: no-repeat;
-  margin: 0;
-  padding: 0;
+    text-align: center;
+    background-image: url(https://hdwallsource.com/img/2014/4/free-background-wallpaper-22918-23554-hd-wallpapers.jpg);
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
 }
 
-
-.main{
-  width: 640px;
-  height: 72vh;
-  margin: auto;
-  padding: 0;
-
-
-
-
+.main {
+    width: 640px;
+    height: 72vh;
+    margin: auto;
+    padding: 0;
 
 }
 
-
-.form-style-6{
+.form-style-6 {
     font: 95% Arial, Helvetica, sans-serif;
     max-width: 400px;
     margin: 10px auto;
     padding: 16px;
     background: #F7F7F7;
     margin-top: 110px;
-  box-shadow: 10px 10px 24px -8px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 24px -8px rgba(0, 0, 0, 0.75);
 
 }
-.form-style-6 h1{
+
+.form-style-6 h1 {
     background: #43D1AF;
     padding: 20px 0;
     font-size: 140%;
@@ -45,6 +40,7 @@ body {
     color: #fff;
     margin: -16px -16px 16px -16px;
 }
+
 .form-style-6 input[type="text"],
 .form-style-6 input[type="date"],
 .form-style-6 input[type="datetime"],
@@ -55,8 +51,7 @@ body {
 .form-style-6 input[type="url"],
 .form-style-6 input[type="password"],
 .form-style-6 textarea,
-.form-style-6 select
-{
+.form-style-6 select {
     -webkit-transition: all 0.30s ease-in-out;
     -moz-transition: all 0.30s ease-in-out;
     -ms-transition: all 0.30s ease-in-out;
@@ -73,6 +68,7 @@ body {
     color: #555;
     font: 95% Arial, Helvetica, sans-serif;
 }
+
 .form-style-6 input[type="text"]:focus,
 .form-style-6 input[type="date"]:focus,
 .form-style-6 input[type="datetime"]:focus,
@@ -82,15 +78,14 @@ body {
 .form-style-6 input[type="time"]:focus,
 .form-style-6 input[type="url"]:focus,
 .form-style-6 textarea:focus,
-.form-style-6 select:focus
-{
+.form-style-6 select:focus {
     box-shadow: 0 0 5px #43D1AF;
     padding: 3%;
     border: 1px solid #43D1AF;
 }
 
 .form-style-6 input[type="submit"],
-.form-style-6 input[type="button"]{
+.form-style-6 input[type="button"] {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -103,203 +98,192 @@ body {
     border-left-style: none;
     color: #fff;
 }
+
 .form-style-6 input[type="submit"]:hover,
-.form-style-6 input[type="button"]:hover{
+.form-style-6 input[type="button"]:hover {
     background: #2EBC99;
 }
 
-
 /*---- Chatbox ----*/
-.conversation-wrap
-   {
-       box-shadow: -2px 0 3px #ddd;
-       padding:0;
-       max-height: 400px;
-       overflow: auto;
-   }
-   .conversation
-   {
-       padding:5px;
-       border-bottom:1px solid #ddd;
-       margin:0;
+.conversation-wrap {
+    box-shadow: -2px 0 3px #ddd;
+    padding: 0;
+    max-height: 400px;
+    overflow: auto;
+}
 
-   }
+.conversation {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    margin: 0;
 
-   .message-wrap
-   {
-       box-shadow: 0 0 3px #ddd;
-       padding:0;
+}
 
-   }
-   .msg
-   {
-       padding:5px;
-       /*border-bottom:1px solid #ddd;*/
-       margin:0;
-   }
-   .msg-wrap
-   {
-       padding:10px;
-       max-height: 400px;
-       overflow: auto;
+.message-wrap {
+    box-shadow: 0 0 3px #ddd;
+    padding: 0;
 
-   }
+}
 
-   .time
-   {
-       color:#bfbfbf;
-   }
+.msg {
+    padding: 5px;
+    /*border-bottom:1px solid #ddd;*/
+    margin: 0;
+}
 
-   .send-wrap
-   {
-       border-top: 1px solid #eee;
-       border-bottom: 1px solid #eee;
-       padding:10px;
-       /*background: #f8f8f8;*/
-   }
+.msg-wrap {
+    padding: 10px;
+    max-height: 400px;
+    overflow: auto;
 
-   .send-message
-   {
-       resize: none;
-   }
+}
 
-   .highlight
-   {
-       background-color: #f7f7f9;
-       border: 1px solid #e1e1e8;
-   }
+.time {
+    color: #bfbfbf;
+}
 
-   .send-message-btn
-   {
-       border-top-left-radius: 0;
-       border-top-right-radius: 0;
-       border-bottom-left-radius: 0;
+.send-wrap {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    /*background: #f8f8f8;*/
+}
 
-       border-bottom-right-radius: 0;
-   }
-   .btn-panel
-   {
-       background: #f7f7f9;
-   }
+.send-message {
+    resize: none;
+}
 
-   .btn-panel .btn
-   {
-       color:#b8b8b8;
+.highlight {
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+}
 
-       transition: 0.2s all ease-in-out;
-   }
+.send-message-btn {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
 
-   .btn-panel .btn:hover
-   {
-       color:#666;
-       background: #f8f8f8;
-   }
-   .btn-panel .btn:active
-   {
-       background: #f8f8f8;
-       box-shadow: 0 0 1px #ddd;
-   }
+    border-bottom-right-radius: 0;
+}
 
-   .btn-panel-conversation .btn,.btn-panel-msg .btn
-   {
+.btn-panel {
+    background: #f7f7f9;
+}
 
-       background: #f8f8f8;
-   }
-   .btn-panel-conversation .btn:first-child
-   {
-       border-right: 1px solid #ddd;
-   }
+.btn-panel .btn {
+    color: #b8b8b8;
 
-   .msg-wrap .media-heading
-   {
-       color:#003bb3;
-       font-weight: 700;
-   }
+    transition: 0.2s all ease-in-out;
+}
 
+.btn-panel .btn:hover {
+    color: #666;
+    background: #f8f8f8;
+}
 
-   .msg-date
-   {
-       background: none;
-       text-align: center;
-       color:#aaa;
-       border:none;
-       box-shadow: none;
-       border-bottom: 1px solid #ddd;
-   }
+.btn-panel .btn:active {
+    background: #f8f8f8;
+    box-shadow: 0 0 1px #ddd;
+}
 
+.btn-panel-conversation .btn, .btn-panel-msg .btn {
 
-   body::-webkit-scrollbar {
-       width: 12px;
-   }
+    background: #f8f8f8;
+}
 
+.btn-panel-conversation .btn:first-child {
+    border-right: 1px solid #ddd;
+}
 
-   /* Let's get this party started */
-   ::-webkit-scrollbar {
-       width: 6px;
-   }
+.msg-wrap .media-heading {
+    color: #003bb3;
+    font-weight: 700;
+}
 
-   /* Track */
-   ::-webkit-scrollbar-track {
-       -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-/*        -webkit-border-radius: 10px;
-       border-radius: 10px;*/
-   }
+.msg-date {
+    background: none;
+    text-align: center;
+    color: #aaa;
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid #ddd;
+}
 
-   /* Handle */
-   ::-webkit-scrollbar-thumb {
-/*        -webkit-border-radius: 10px;
-       border-radius: 10px;*/
-       background:#ddd;
-       -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-   }
-   ::-webkit-scrollbar-thumb:window-inactive {
-       background: #ddd;
-   }
+body::-webkit-scrollbar {
+    width: 12px;
+}
 
-.form-control send-message{
- width: 100%;
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    /*        -webkit-border-radius: 10px;
+           border-radius: 10px;*/
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    /*        -webkit-border-radius: 10px;
+           border-radius: 10px;*/
+    background: #ddd;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: #ddd;
+}
+
+.form-control send-message {
+    width: 100%;
 }
 
 /*---- header ----*/
 
 header {
-display: inline-block;
-width: 100%;
-height: 180px;
-background-image: url(http://rulistaff.free.fr/background.jpg);
+    display: inline-block;
+    width: 100%;
+    height: 180px;
+    background-image: url(http://rulistaff.free.fr/background.jpg);
 }
 
 header .principal {
-color: #fff;
+    color: #fff;
 
-font-size: 0.8rem;
-margin-top : 12px;
-clear: both;
-font-family: "arial","Open Sans","Avenir Next",sans-serif;
-line-height: 1.5;
+    font-size: 0.8rem;
+    margin-top: 12px;
+    clear: both;
+    font-family: "arial", "Open Sans", "Avenir Next", sans-serif;
+    line-height: 1.5;
 }
-.navUp{
-  display: block;
-  margin: auto;
+
+.navUp {
+    display: block;
+    margin: auto;
 }
+
 .bouton {
-  display: block;
-  margin: auto;
-  width: 19%;
+    display: block;
+    margin: auto;
+    width: 19%;
 }
+
 .bouton ul {
-  display: flex;
-  flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 .bouton ul a {
-margin-right: 15px;
-line-height:50px;
-display : block;
-padding : 0 0.5em;
-list-style-type : none;
-float: left;
-background: #656565;
+    margin-right: 15px;
+    line-height: 50px;
+    display: block;
+    padding: 0 0.5em;
+    list-style-type: none;
+    float: left;
+    background: #656565;
     background: -webkit-gradient(linear, 0 0, 0 bottom, from(#656565), to(#444));
     background: -moz-linear-gradient(#656565, #444);
     background: linear-gradient(#656565, #444);
@@ -308,17 +292,18 @@ background: #656565;
     box-shadow: inset 0 0 0 1px #939393;
     color: #fff;
     text-shadow: 0 1px 0 #2f2f2f;
-color:white;
-text-decoration:none;
+    color: white;
+    text-decoration: none;
 }
+
 .bouton a:hover {
-  background: #4c4c4c;
-      background: -webkit-gradient(linear, 0 0, 0 bottom, from(#4c4c4c), to(#565656));
-      background: -moz-linear-gradient(#4c4c4c, #565656);
-      background: linear-gradient(#4c4c4c, #565656);
-      border: solid 1px #464646;
-      border-bottom: solid 3px #414141;
-      box-shadow: inset 0 0 0 1px #818181
+    background: #4c4c4c;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#4c4c4c), to(#565656));
+    background: -moz-linear-gradient(#4c4c4c, #565656);
+    background: linear-gradient(#4c4c4c, #565656);
+    border: solid 1px #464646;
+    border-bottom: solid 3px #414141;
+    box-shadow: inset 0 0 0 1px #818181
 }
 
 .bouton a.button.black:active {
@@ -327,9 +312,9 @@ text-decoration:none;
     background: -moz-linear-gradient(#474747, #444);
     background: linear-gradient(#474747, #444);
     border: solid 1px #2f2f2f;
-    box-shadow: inset 0 10px 15px 0 #3e3e3e; }
-
+    box-shadow: inset 0 10px 15px 0 #3e3e3e;
+}
 
 .bouton ul li {
-list-style: none;
+    list-style: none;
 }

@@ -37,6 +37,7 @@ class Db
             $user = $req->fetchObject();
 
             if ($user->password == $password) {
+                echo "login";
                 session_start();
                 $_SESSION["user"] = $user;
                 $_SESSION["logged"] = true;
@@ -60,14 +61,13 @@ class Db
 
     public function newMessage($text)
     {
-        session_start();
         $req = $this->db->prepare("INSERT INTO Messages (text,id_user)VALUES  (?,?)");
-        $req->execute([$text, $_SESSION[id]]);
+        $req->execute([$text, $_SESSION["user"]->id]);
     }
 
     public function getMessages()
     {
-        $messages = $this->db->query("SELECT * FROM Users,Messages Where Users.id = Messages.id_user ORDER BY TIME DESC ");
+        $messages = $this->db->query("SELECT * FROM Users,Messages Where Users.id = Messages.id_user ORDER BY TIME ASC ");
         $messageArray = [];
         while ($message = $messages->fetchObject()) {
             $messageArray[] = $message;
