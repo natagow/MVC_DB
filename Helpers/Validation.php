@@ -13,23 +13,22 @@ class Validation
         if (!preg_match("/^[a-z0-9_-]{5,}$/", $password)) {
             $this->errors['password'] = "votre mot de passe doit contenir au moins 8 caractères avec au minimum une majuscule,une minuscule et 1 nombre ";
         }
-
         session_start();
         $_SESSION["errors"] = $this->errors;
         return count($this->errors);
     }
 
-    /**
-     * @return mixed
-     */
+    public function messageSize($message)
+    {
+        $message = trim($message);
+        return strlen($message) > 0 ? true : false;
+    }
+
     public function displayErrors()
     {
         return $_SESSION["errors"];
     }
 
-    /**
-     * @return mixed
-     */
     public function clearErrors()
     {
         $_SESSION["errors"] = [];

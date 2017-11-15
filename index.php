@@ -27,12 +27,12 @@ switch ($action) {
         require_once(CONTROLLER . 'UserController.php');
         call_user_func_array([$controller, $methode], [$pseudo, $password, $genre]);
         break;
+    case 'UserController@logout':
+        call_user_func_array([$controller, $methode], []);
+        break;
     case 'ChatboxController@createMessage':
         require_once(CONTROLLER . 'ChatboxController.php');
         call_user_func_array([$controller, $methode], [$message]);
-        break;
-    case 'UserController@logout':
-        call_user_func_array([$controller, $methode], []);
         break;
     case 'UserController@index':
         header("location:Views/login.php");
