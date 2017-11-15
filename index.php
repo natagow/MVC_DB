@@ -3,9 +3,8 @@ require "Controllers/UserController.php";
 require "Controllers/ChatboxController.php";
 require "Helpers/Validation.php";
 require "Model/Db.php";
-
 define('CONTROLLER', 'Controllers/');
-
+$action = "UserController@index";
 
 if ($_SERVER['REQUEST_METHOD'] == "POST" || $_SERVER['REQUEST_METHOD'] == "GET") {
     extract($_POST);
@@ -13,10 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST" || $_SERVER['REQUEST_METHOD'] == "GET")
     $controllerAndMethode = explode("@", $action);
     $controller = new $controllerAndMethode[0]();
     $methode = $controllerAndMethode[1];
-} else {
-    $action = "UserController@index";
 }
-
 
 switch ($action) {
     case 'UserController@login':
