@@ -14,6 +14,7 @@ class UserController
 
     public function login($pseudo = null, $password = null)
     {
+
         if ($this->db->login($pseudo, $password)) {
             header("location:Views/chatbox.php");
             exit();

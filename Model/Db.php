@@ -17,13 +17,13 @@ class Db
 
     public function signUp($pseudo, $password, $sexe)
     {
-        $req = $this->db->prepare("SELECT * FROM Users where pseudo = (?)");
+        $req = $this->db->prepare("SELECT * FROM users where pseudo = (?)");
         $req->execute([$pseudo]);
         if ($req->rowCount() == 1) {
             return false;
         }
 
-        $req = $this->db->prepare("INSERT INTO Users (pseudo,password,sexe)VALUES  (?,?,?)");
+        $req = $this->db->prepare("INSERT INTO users (pseudo,password,sexe)VALUES  (?,?,?)");
         $req->execute([$pseudo, $password, $sexe]);
         return true;
 
@@ -31,7 +31,7 @@ class Db
 
     public function login($pseudo, $password)
     {
-        $req = $this->db->prepare("SELECT * FROM Users where pseudo = (?)");
+        $req = $this->db->prepare("SELECT * FROM users where pseudo = (?)");
         $req->execute([$pseudo]);
         if ($req->rowCount() == 1) {
             $user = $req->fetchObject();
@@ -61,13 +61,13 @@ class Db
 
     public function newMessage($text)
     {
-        $req = $this->db->prepare("INSERT INTO Messages (text,id_user)VALUES  (?,?)");
+        $req = $this->db->prepare("INSERT INTO messages (text,id_user)VALUES  (?,?)");
         $req->execute([$text, $_SESSION["user"]->id]);
     }
 
     public function getMessages()
     {
-        $messages = $this->db->query("SELECT * FROM Users,Messages Where Users.id = Messages.id_user ORDER BY TIME ASC ");
+        $messages = $this->db->query("SELECT * FROM users,messages Where users.id = messages.id_user ORDER BY TIME ASC ");
         $messageArray = [];
         while ($message = $messages->fetchObject()) {
             $messageArray[] = $message;
