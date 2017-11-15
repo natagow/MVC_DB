@@ -15,7 +15,7 @@ class UserController
     public function login($pseudo = null, $password = null)
     {
         if ($this->db->login($pseudo, $password)) {
-            header("location:Views/Chatbox.php");
+            header("location:Views/chatbox.php");
             exit();
         }
         header("location:Views/login.php");

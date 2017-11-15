@@ -17,9 +17,9 @@ class ChatboxController
         if (isset($_SESSION["logged"])) {
             if ($this->validation->messageSize($message)) {
                 $this->db->newMessage(htmlentities($message));
-                header("location:Views/Chatbox.php");
+                header("location:Views/chatbox.php");
             }
-            header("location:Views/Chatbox.php");
+            header("location:Views/chatbox.php");
         } else {
             header("location:Views/inscription.php");
         }

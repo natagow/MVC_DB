@@ -8,7 +8,7 @@ class Db
     public function __construct()
     {
         try {
-            $this->db = new PDO('mysql:host=localhost;dbname=chatbox', 'root', '');
+            $this->db = new PDO('mysql:host=localhost;dbname=chatbox', 'root', 'user');
             $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (Exception $e) {
             die('Erreur :' . $e->getMessage());
@@ -78,4 +78,3 @@ class Db
 }
 
 ?>
-
