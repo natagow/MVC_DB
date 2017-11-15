@@ -39,7 +39,5 @@ class UserController
         $this->db->logout();
         header("location:Views/login.php");
     }
-
 }
-
 ?>
